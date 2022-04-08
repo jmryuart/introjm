@@ -1,0 +1,24 @@
+div.selfintro ul {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+div.selfintro ul li h4 {
+  font-size: 18px;
+}
+
+div.selfintro ul li p {
+  font-size: 16px;
+  line-height: 25px;
+  font-family: 'noto serif kr', serif;
+  margin-top: 10px;
+  text-indent: 7px;
+}
+/*# sourceMappingURL=SelfIntro.module.css.map */
