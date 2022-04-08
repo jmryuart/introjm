@@ -1,0 +1,120 @@
+div.wrap {
+  position: relative;
+  font-family: "noto sans kr", sans-serif;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  menu {
+    position: absolute;
+    left: 0;
+    padding-top: 40px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    li {
+      width: fit-content;
+      border-radius: 10px;
+      font-weight: 700;
+      a {
+        width: fit-content;
+        line-height: 20px;
+        padding: 10px;
+        display: block;
+        border-radius: 10px;
+        span{
+          display: none;
+        }
+        &:hover {
+          background-color: #000;
+          color: #fff;
+          span{
+            display: inline;
+          }
+        }
+      }
+      &:nth-of-type(1) {
+        background-color: #cfc;
+      }
+      &:nth-of-type(2) {
+        background-color: #fcc;
+      }
+      &:nth-of-type(3) {
+        background-color: #ccf;
+      }
+      &:nth-of-type(4) {
+        background-color: #fcf;
+      }
+      &:nth-of-type(5) {
+        background-color: #cff;
+      }
+      &:nth-of-type(6) {
+        background-color: #ffc;
+      }
+    }
+  }
+  div.logJoin {
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: left;
+    ul {
+      display: flex;
+      gap: 20px;
+      li{
+        padding: 10px;
+        font-weight: 500;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+    }
+    div{
+      position: absolute;
+      top: 100%;
+      right: 0;
+      border: 1px solid #000;
+      padding: 10px;
+      div{
+        position:static;
+        padding: 0;
+        border: 0;
+      }
+    }
+    span{
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      cursor: pointer;
+      line-height: 30px;
+      padding: 0 10px;
+      transition: all, 0.4s;
+      &:hover{
+        font-weight: 700;
+        background-color: #000;
+        color: #fff;
+      }
+    }
+    form{
+      h4{
+        line-height: 30px;
+      }
+      input{
+        height: 25px;
+      }
+      button{
+        height: 30px;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.4s;
+        margin-top: 10px;
+        &:hover{
+          font-weight: 700;
+          background-color: #000;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

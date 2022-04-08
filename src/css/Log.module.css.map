@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,GAAG,AAAA,MAAM,CAAA;EACP,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,CAAC;EAAE,GAAG,EAAE,IAAI;CACpB",
+    "sources": [
+        "Log.module.scss"
+    ],
+    "names": [],
+    "file": "Log.module.css"
+}
