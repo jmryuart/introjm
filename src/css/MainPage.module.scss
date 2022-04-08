@@ -5,7 +5,7 @@ div.wrap {
   font-size: 14px;
   font-weight: 300;
   menu {
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     left: 0;
     padding-top: 40px;
@@ -56,7 +56,7 @@ div.wrap {
   }
   div.logJoin {
     text-align: right;
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     right: 0;
     top: 0;
@@ -64,6 +64,9 @@ div.wrap {
     ul {
       display: flex;
       gap: 20px;
+      background-color: #fff;
+      background-color: #ccc;
+      border: 1px solid #000;
       li{
         padding: 10px;
         font-weight: 500;

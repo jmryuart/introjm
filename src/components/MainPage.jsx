@@ -87,7 +87,7 @@ const MainPage = () => {
         </li>
         <li>
           <NavLink to="/introJinmo">
-            자<span>기소개서</span>
+            이<span>력서</span>
           </NavLink>
         </li>
       </menu>

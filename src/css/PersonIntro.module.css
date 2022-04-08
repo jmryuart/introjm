@@ -1,0 +1,135 @@
+div.personIntro {
+  text-align: center;
+}
+
+div.personIntro div {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+div.personIntro h1 {
+  font-size: 36px;
+  line-height: 60px;
+  letter-spacing: 60px;
+}
+
+div.personIntro h2 {
+  margin-top: 20px;
+  line-height: 40px;
+  text-align: right;
+}
+
+div.personIntro .personInfo {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+div.personIntro .personInfo .image {
+  width: 120px;
+  height: 150px;
+  background-image: url("http://ntnoop.com/dataserver/jinmo.jpg");
+  background-position: center;
+  background-size: cover;
+  border: 1px solid #000;
+}
+
+div.personIntro .personInfo .image a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+
+div.personIntro .personInfo .texts_mobile {
+  display: none;
+}
+
+div.personIntro .personInfo .texts {
+  text-align: left;
+}
+
+div.personIntro .personInfo .texts h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  line-height: 40px;
+  font-size: 14px;
+}
+
+div.personIntro .personInfo .texts h4 strong {
+  font-size: 18px;
+}
+
+div.personIntro .personInfo .texts h4 span {
+  font-weight: 500;
+  position: relative;
+  padding: 0 20px;
+}
+
+div.personIntro .personInfo .texts h4 span::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 8px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+}
+
+div.personIntro .personInfo .texts h4 span:last-of-type::before {
+  display: none;
+}
+
+div.personIntro .personInfo .texts h5 {
+  margin-top: 10px;
+  line-height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.personIntro .personInfo .texts h5 span {
+  display: block;
+  width: 100px;
+}
+
+div.personIntro .personInfo .texts h5 a {
+  color: #700;
+  padding: 0 10px;
+}
+
+@media (max-width: 670px) {
+  div.personIntro h1 {
+    letter-spacing: 10px;
+  }
+  div.personIntro .personInfo {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  div.personIntro .personInfo .image {
+    width: 100%;
+    height: calc((100vw - 60px) * 1.25);
+  }
+  div.personIntro .personInfo .texts {
+    display: none;
+  }
+  div.personIntro .personInfo .texts_mobile {
+    display: block;
+    text-align: left;
+  }
+  div.personIntro .personInfo .texts_mobile h4 {
+    line-height: 30px;
+  }
+  div.personIntro .personInfo .texts_mobile h5 {
+    line-height: 25px;
+  }
+}
+/*# sourceMappingURL=PersonIntro.module.css.map */

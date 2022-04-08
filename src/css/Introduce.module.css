@@ -1,1 +1,147 @@
-/* No CSS *//*# sourceMappingURL=Introduce.module.css.map */
+div.introJinmo {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+div.introJinmo div {
+  border-top: 2px solid #000;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+div.introJinmo div:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+div.introJinmo div div {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+div.introJinmo h3 {
+  font-size: 22px;
+  line-height: 40px;
+  padding-bottom: 20px;
+}
+
+div.introJinmo h4 {
+  line-height: 30px;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+div.introJinmo h5 {
+  margin-top: 5px;
+  text-indent: 10px;
+  line-height: 25px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+div.introJinmo table {
+  width: 100%;
+  margin-top: 20px;
+  -webkit-box-shadow: 2px 2px 3px #555;
+          box-shadow: 2px 2px 3px #555;
+  font-weight: 500;
+  text-align: center;
+}
+
+div.introJinmo table tr th {
+  letter-spacing: 10px;
+  line-height: 40px;
+  width: 40px;
+  border: 1px solid #000;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+
+div.introJinmo table tr td {
+  line-height: 30px;
+  border: 1px solid #000;
+  font-size: 14px;
+  padding: 0 5px;
+}
+
+div.introJinmo table tr:first-of-type {
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #eee;
+  text-align: center;
+}
+
+div.introJinmo table tr:first-of-type td {
+  line-height: 40px;
+}
+
+div.introJinmo div.academy_mb {
+  display: none;
+}
+
+div.introJinmo div.career {
+  display: block;
+}
+
+div.introJinmo div.career_mb {
+  display: none;
+}
+
+div.introJinmo div.ability table tr:nth-of-type(5) {
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #eee;
+  text-align: center;
+}
+
+div.introJinmo div.ability table tr:nth-of-type(5) td {
+  line-height: 40px;
+}
+
+div.introJinmo div.ability_mb {
+  display: none;
+}
+
+div.introJinmo div.military_mb {
+  display: none;
+}
+
+@media (max-width: 730px) {
+  div.introJinmo div.academy {
+    display: none;
+  }
+  div.introJinmo div.academy_mb {
+    display: block;
+  }
+  div.introJinmo div.career {
+    display: none;
+  }
+  div.introJinmo div.career_mb {
+    display: block;
+  }
+  div.introJinmo div.ability {
+    display: none;
+  }
+  div.introJinmo div.ability_mb {
+    display: block;
+  }
+  div.introJinmo div.military {
+    display: none;
+  }
+  div.introJinmo div.military_mb {
+    display: block;
+  }
+}
+/*# sourceMappingURL=Introduce.module.css.map */
