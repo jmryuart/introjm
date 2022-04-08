@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import { NavLink, useHistory } from "react-router-dom";
 import { auth, dbService } from "../fbase";
 import styled from "../css/Join.module.css";
 import {
@@ -19,7 +18,6 @@ const Join = ({closeBtn}) => {
   const passwordRef = useRef("");
   const passwordCheckRef = useRef("");
   const nicknameRef = useRef("");
-  const history = useHistory();
   const [checkPassword, setCheckPassword] = useState("Password Check");
   const [nickName, setNickName] = useState("NickName");
   const [joinFlag, setJoinFlag] = useState(false);
