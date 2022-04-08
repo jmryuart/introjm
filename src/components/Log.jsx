@@ -2,13 +2,10 @@ import React, { useRef } from "react";
 import styled from "../css/Log.module.css";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../fbase";
-import { NavLink } from "react-router-dom";
-import { useHistory } from "react-router-dom";
 
 const Log = ({ closeBtn }) => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
-  const history = useHistory();
   const onSubmit = async (event) => {
     event.preventDefault();
     try {

@@ -94,7 +94,10 @@ const MainPage = () => {
       <div className={styled.logJoin}>
         <ul>
           {loggingFlag ? (
+            <>
+            <li>{nickName}님 환영합니다.</li>
             <li onClick={logOut}>로그아웃</li>
+            </>
           ) : (
             <>
               <li onClick={openJoin}>가입하기</li>
@@ -120,7 +123,7 @@ const MainPage = () => {
       <Route path="/board" exact>
         <Board />
       </Route>
-      <Route path="/cheat" exact>
+      <Route path="/cheat" nickName={nickName} exact>
         <Cheat />
       </Route>
     </div>
