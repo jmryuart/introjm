@@ -1,0 +1,57 @@
+div.board {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 80px 40px 40px;
+}
+
+div.board .divideBoard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.board .divideBoard h4 {
+  text-indent: 20px;
+  width: calc(100% - 180px);
+  background-color: #eee;
+  line-height: 30px;
+  border: 1px solid #000;
+}
+
+div.board .divideBoard h5 {
+  line-height: 30px;
+  text-align: center;
+  width: 100px;
+  padding: 0 5px;
+  background-color: #ccc;
+  border: 1px solid #000;
+}
+
+div.board table {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+div.board span {
+  margin: 0 5px;
+  padding: 0 3px;
+  cursor: pointer;
+}
+
+div.board h5.write {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+div.board .selectPage {
+  padding: 20px 0;
+  text-align: center;
+}
+
+div.board .selectPage span:first-of-type {
+  font-weight: 700;
+}
+/*# sourceMappingURL=Board.module.css.map */
