@@ -42,7 +42,7 @@ const MainPage = () => {
     const ok = window.confirm("로그아웃 하시겠습니까?");
     if (ok) {
       auth.signOut();
-      setNickName(null)
+      setNickName(null);
     }
   };
   const openLog = () => {
@@ -95,8 +95,8 @@ const MainPage = () => {
         <ul>
           {loggingFlag ? (
             <>
-            <li>{nickName}님 환영합니다.</li>
-            <li onClick={logOut}>로그아웃</li>
+              <li>{nickName}님 환영합니다.</li>
+              <li onClick={logOut}>로그아웃</li>
             </>
           ) : (
             <>
@@ -121,10 +121,10 @@ const MainPage = () => {
         <Portfolio />
       </Route>
       <Route path="/board" exact>
-        <Board />
+        <Board nickName={nickName} />
       </Route>
-      <Route path="/cheat" nickName={nickName} exact>
-        <Cheat />
+      <Route path="/cheat" exact>
+        <Cheat nickName={nickName} />
       </Route>
     </div>
   );
