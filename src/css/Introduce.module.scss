@@ -72,7 +72,27 @@ div.introJinmo {
     display: none;
   }
   div.career {
-    display: block;
+    table {
+      text-align: left;
+      tbody {
+        tr {
+          td{
+            &:first-of-type{
+              text-align: center;
+            }
+            &:nth-of-type(3){
+              text-align: center;
+              width: 50px;
+            }
+          }
+          &:first-of-type {
+            td {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
   }
   div.career_mb {
     display: none;

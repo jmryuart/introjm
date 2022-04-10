@@ -14,7 +14,6 @@ const Message = ({ list, nickName, index, array }) => {
   const mouseEnter = () => {
     if (nickName === list.creatorId) setFlag(true);
   };
-  console.log();
   return (
     <>
       {(array[index + 1] === undefined && <h5>{list.date}</h5>) ||

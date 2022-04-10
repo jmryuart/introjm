@@ -27,6 +27,7 @@ div.boardWrite .writeHeader .title input {
 
 div.boardWrite .writeHeader .writer {
   position: absolute;
+  line-height: 30px;
   top: 100%;
   right: 0;
 }
