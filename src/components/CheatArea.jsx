@@ -24,7 +24,7 @@ const CheatArea = ({ nickName, styled }) => {
         <li key={list.id}>
           <>
             {nickName === list.creatorId ? (
-              <div className={styled.mymessage} >
+              <div className={styled.mymessage}>
                 <Message nickName={nickName} list={list} />
               </div>
             ) : (

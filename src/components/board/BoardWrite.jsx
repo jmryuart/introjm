@@ -1,9 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { dbService } from "../../fbase";
 import { addDoc, collection } from "firebase/firestore";
 import styled from "../../css/BaordWrite.module.css";
 
-const BoardWrite = ({ setBoardFlag, nickName }) => {
+const BoardWrite = ({ setBoardFlag, nickName, setBoardpage }) => {
   const titleRef = useRef("");
   const messageRef = useRef("");
   const onSubmit = async (event) => {
@@ -28,28 +28,43 @@ const BoardWrite = ({ setBoardFlag, nickName }) => {
         titleRef.current.value = null;
         messageRef.current.value = null;
         setBoardFlag("board");
+        setBoardpage(1);
       });
     } else {
       alert("제목 또는 내용이 비어있습니다.");
     }
   };
+  const goList = () => {
+    setBoardFlag("board");
+    setBoardpage(1);
+  };
+  const setClear = () => {
+    titleRef.current.value = "";
+    messageRef.current.value = "";
+  };
   return (
     <div className={styled.boardWrite}>
-      <h4>게시물 작성하기</h4>
-      <div>
-        <i>Title : </i>
-        <input type="text" ref={titleRef} />
+      <div className={styled.writeHeader}>
+        <div className={styled.title}>
+          <i>Title : </i>
+          <input type="text" ref={titleRef} />
+        </div>
+        <div className={styled.writer}>
+          <i>작성자 : </i>
+          <span>{nickName}</span>
+        </div>
       </div>
-      <textarea ref={messageRef}></textarea>
-      <div>
-        <button onClick={onSubmit}>글쓰기</button>
-        <button
-          onClick={() => {
-            setBoardFlag("board");
-          }}
-        >
-          목록으로
-        </button>
+      <div className={styled.writeSection}>
+        <textarea ref={messageRef}></textarea>
+      </div>
+      <div className={styled.writeFooter}>
+        <div className={styled.goList}>
+          <span onClick={goList}>리스트로</span>
+        </div>
+        <div className={styled.goWrite}>
+          <span onClick={setClear}>처음부터</span>
+          <span onClick={onSubmit}>작성</span>
+        </div>
       </div>
     </div>
   );
