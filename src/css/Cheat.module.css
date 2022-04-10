@@ -34,6 +34,16 @@ div.cheat ul::-webkit-scrollbar {
 }
 
 div.cheat ul li div {
+  position: relative;
+}
+
+div.cheat ul li div h5 {
+  text-align: center;
+  line-height: 40px;
+  color: #000;
+}
+
+div.cheat ul li div div {
   max-width: 320px;
   width: calc(100% - 40px);
   display: -webkit-box;
@@ -45,55 +55,70 @@ div.cheat ul li div {
           flex-direction: column;
   gap: 10px;
   padding: 15px;
+  position: relative;
+  border: 1px solid #000;
 }
 
-div.cheat ul li div i {
+div.cheat ul li div div i {
   font-size: 16px;
   font-weight: 700;
   text-indent: 5px;
 }
 
-div.cheat ul li .mymessage {
-  margin-left: auto;
-  background-color: #333;
-  color: #fff;
-  position: relative;
-  border-radius: 15px 0 15px 15px;
-}
-
-div.cheat ul li .mymessage i {
-  text-align: right;
-  color: #fff;
-}
-
-div.cheat ul li .mymessage span {
-  color: #eee;
-}
-
-div.cheat ul li .mymessage button {
+div.cheat ul li div div button {
   display: none;
   position: absolute;
   top: 5px;
   left: 0;
+  background-color: transparent;
+  color: #fff;
   border: 0;
-  background: transparent;
-}
-
-div.cheat ul li .mymessage button i {
   cursor: pointer;
 }
 
-div.cheat ul li .mymessage:hover button {
+div.cheat ul li div div h6 {
+  text-align: center;
+  font-size: 11px;
+  width: 50px;
+  position: absolute;
+  bottom: 0;
+}
+
+div.cheat ul li .mymessage {
+  border: 0px solid #000;
+  color: #fff;
+}
+
+div.cheat ul li .mymessage div {
+  border-radius: 15px 15px 0 15px;
+  margin-left: auto;
+  background-color: #333;
+}
+
+div.cheat ul li .mymessage div h6 {
+  right: 100%;
+  color: #000;
+}
+
+div.cheat ul li .mymessage div i {
+  text-align: right;
+}
+
+div.cheat ul li .mymessage div:hover button {
   display: block;
 }
 
 div.cheat ul li .othermessage {
-  border-radius: 15px 15px 15px 0;
-  background-color: #fcc;
+  border: 0px solid #000;
 }
 
-div.cheat ul li .othermessage button {
-  display: none;
+div.cheat ul li .othermessage div {
+  background-color: #ddf;
+  border-radius: 0 15px 15px 15px;
+}
+
+div.cheat ul li .othermessage div h6 {
+  left: 100%;
 }
 
 div.cheat .sendMessage {

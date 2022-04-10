@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/cheat/CheatArea.jsx
 import React, { useEffect, useState } from "react";
 import { dbService } from "../../fbase";
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
@@ -40,3 +41,5 @@ const CheatArea = ({ nickName, styled }) => {
 };
 
 export default CheatArea;
+=======
+>>>>>>> c9ae211078ac682b5f8b74a8533e26324eb243e8:src/components/CheatArea.jsx
