@@ -75,13 +75,19 @@ const Join = ({closeBtn}) => {
         id: doc.id,
         ...doc.data(),
       }));
-      if (getNickname[0]) {
-        setNickName("중복된 nickname입니다.");
-        setJoinFlag(false);
+      if(nicknameRef.current.value.length < 9){
+        if (getNickname[0]) {
+          setNickName("중복된 nickname입니다.");
+          setJoinFlag(false);
+        } else {
+          setNickName("NickName");
+          setJoinFlag(true);
+        }
       } else {
-        setNickName("NickName");
-        setJoinFlag(true);
+        setNickName("닉네임이 너무 깁니다.");
+        setJoinFlag(false);
       }
+      
     });
   };
 

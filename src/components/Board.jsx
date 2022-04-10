@@ -28,8 +28,8 @@ const Board = ({ nickName }) => {
   }, []);
 
   const writeNew = () => {
-    if(nickName !== null) setBoardFlag("write");
-    else alert('글을 작셩하려면 로그인을 해주세요. ')
+    if (nickName !== null) setBoardFlag("write");
+    else alert("글을 작셩하려면 로그인을 해주세요. ");
   };
   const readBoard = (list) => {
     setBoardFlag("detail");
@@ -39,6 +39,7 @@ const Board = ({ nickName }) => {
   for (let i = Math.ceil(boardRead.length / dividePageNum); i > 0; i--) {
     pageNum.push(i);
   }
+  
   return (
     <div className={styled.board}>
       {boardFlag === "board" && (
@@ -57,7 +58,11 @@ const Board = ({ nickName }) => {
         <BoardWrite setBoardFlag={setBoardFlag} nickName={nickName} />
       )}
       {boardFlag === "detail" && (
-        <BoardDetail boardSet={boardSet} setBoardFlag={setBoardFlag} />
+        <BoardDetail
+          boardSet={boardSet}
+          nickName={nickName}
+          setBoardFlag={setBoardFlag}
+        />
       )}
     </div>
   );

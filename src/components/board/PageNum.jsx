@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-export default function PageNum({ list, setBoardpage, index }) {
+export default function PageNum({ list, setBoardpage, boardpage }) {
   const thing = document.getElementsByClassName("pageNum");
   const bordRef = useRef("");
   const onClick = () => {
@@ -10,9 +10,9 @@ export default function PageNum({ list, setBoardpage, index }) {
     }
     bordRef.current.style.fontWeight = "700";
   };
-  if (index === 0) {
-    // document.querySelector("pageNum").style.fontWeight = "700";
-  }
+  setTimeout(()=>{
+    thing[boardpage-1].style.fontWeight = "700";
+  },1)
   return (
     <>
       <i className="pageNum" ref={bordRef} onClick={onClick}>

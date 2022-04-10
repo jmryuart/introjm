@@ -79,6 +79,10 @@ div.cheat ul li .mymessage button {
   background: transparent;
 }
 
+div.cheat ul li .mymessage button i {
+  cursor: pointer;
+}
+
 div.cheat ul li .mymessage:hover button {
   display: block;
 }
