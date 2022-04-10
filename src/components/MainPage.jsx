@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "../css/MainPage.module.css";
 import { Route, NavLink, useHistory } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
@@ -87,11 +87,11 @@ const MainPage = () => {
             C<span>HEAT</span>
           </NavLink>
         </li>
-        {/* <li>
+        <li>
           <NavLink to="/introJinmo">
             이<span>력서</span>
           </NavLink>
-        </li> */}
+        </li>
       </menu>
       <div className={styled.logJoin}>
         <ul>

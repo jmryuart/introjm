@@ -24,53 +24,74 @@ div.cheat {
     }
     li {
       div {
-        max-width: 320px;
-        width: calc(100% - 40px);
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 15px;
-        i {
-          font-size: 16px;
-          font-weight: 700;
-          text-indent: 5px;
+        position: relative;
+        h5 {
+          text-align: center;
+          line-height: 40px;
+          color: #000;
+        }
+        div {
+          max-width: 320px;
+          width: calc(100% - 40px);
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 15px;
+          position: relative;
+          border: 1px solid #000;
+          i {
+            font-size: 16px;
+            font-weight: 700;
+            text-indent: 5px;
+          }
+          button {
+            display: none;
+            position: absolute;
+            top: 5px;
+            left: 0;
+            background-color: transparent;
+            color: #fff;
+            border: 0;
+            cursor: pointer;
+          }
+          h6 {
+            text-align: center;
+            font-size: 11px;
+            width: 50px;
+            position: absolute;
+            bottom: 0;
+          }
         }
       }
       .mymessage {
-        margin-left: auto;
-        background-color: #333;
+        border: 0px solid #000;
         color: #fff;
-        position: relative;
-        border-radius: 15px 0 15px 15px;
-        i {
-          text-align: right;
-          color: #fff;
-        }
-        span{
-          color: #eee;
-        }
-        button {
-          display: none;
-          position: absolute;
-          top: 5px;
-          left: 0;
-          border: 0;
-          background: transparent;
-          i{
-            cursor: pointer;
+        div {
+          border-radius: 15px 15px 0 15px;
+          margin-left: auto;
+          background-color: #333;
+          h6 {
+            right: 100%;
+            color: #000;
           }
-        }
-        &:hover {
-          button {
-            display: block;
+          i {
+            text-align: right;
+          }
+          &:hover {
+            button {
+              display: block;
+            }
           }
         }
       }
       .othermessage {
-        border-radius: 15px 15px 15px 0;
-        background-color: #fcc;
-        button {
-          display: none;
+        border: 0px solid #000;
+        div {
+          background-color: #ddf;
+          border-radius: 0 15px 15px 15px;
+          h6 {
+            left: 100%;
+          }
         }
       }
     }
