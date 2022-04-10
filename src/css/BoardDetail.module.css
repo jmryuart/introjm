@@ -1,1 +1,104 @@
-/* No CSS *//*# sourceMappingURL=BoardDetail.module.css.map */
+div.boardDetail {
+  border: 0px solid #000;
+}
+
+div.boardDetail .boarderHeader {
+  height: 120px;
+  position: relative;
+}
+
+div.boardDetail .boarderHeader .title {
+  padding-left: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 60px;
+  height: 60px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.boardDetail .boarderHeader .title i {
+  font-family: "dm serif display";
+  font-style: italic;
+}
+
+div.boardDetail .boarderHeader .title span {
+  cursor: unset;
+}
+
+div.boardDetail .boarderHeader .writer {
+  border: 1px solid #000;
+  border-bottom: 0;
+  padding: 0 10px;
+  height: 40px;
+  line-height: 40px;
+  font-family: "noto serif kr";
+  font-weight: 700;
+  font-size: 16px;
+  position: absolute;
+  right: 0;
+  top: 80px;
+  overflow: hidden;
+}
+
+div.boardDetail .boarderHeader .writer span {
+  cursor: unset;
+}
+
+div.boardDetail .boarderSection {
+  min-height: 180px;
+  max-height: 540px;
+  border: 1px solid #000;
+  overflow: scroll;
+  padding: 0 10px;
+  cursor: text;
+}
+
+div.boardDetail .boarderSection p:first-of-type {
+  text-indent: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+div.boardDetail .boarderFooter {
+  border: 0px solid #000;
+  position: relative;
+}
+
+div.boardDetail .boarderFooter .date {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+div.boardDetail .boarderFooter .date span {
+  cursor: unset;
+}
+
+div.boardDetail .boarderFooter .btns {
+  font-weight: 500;
+  font-size: 16px;
+  color: #777;
+  line-height: 40px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+div.boardDetail .boarderFooter .btns span {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+div.boardDetail .boarderFooter .btns span:hover {
+  color: #000;
+}
+/*# sourceMappingURL=BoardDetail.module.css.map */

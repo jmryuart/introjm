@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from "../css/MainPage.module.css";
-import { Route, NavLink } from "react-router-dom";
+import { Route, NavLink, useHistory } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth, dbService } from "../fbase";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
@@ -18,6 +18,7 @@ const MainPage = () => {
   const [logFlag, setLogFlag] = useState(false);
   const [joinFlag, setJoinFlag] = useState(false);
   const [nickName, setNickName] = useState(null);
+  const history = useHistory();
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -43,6 +44,7 @@ const MainPage = () => {
     if (ok) {
       auth.signOut();
       setNickName(null);
+      history.push("/");
     }
   };
   const openLog = () => {
@@ -85,11 +87,11 @@ const MainPage = () => {
             C<span>HEAT</span>
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink to="/introJinmo">
             이<span>력서</span>
           </NavLink>
-        </li>
+        </li> */}
       </menu>
       <div className={styled.logJoin}>
         <ul>
