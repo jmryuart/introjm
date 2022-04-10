@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { dbService } from "../fbase";
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
-import Message from "./Message";
+import Message from "./cheat/Message";
 import styled from "../css/Cheat.module.css";
-<<<<<<< HEAD
-import CheatArea from "./cheat/CheatArea";
 import SendMessage from "./cheat/SendMessage";
-=======
-import SendMessage from "./SendMessage";
->>>>>>> c9ae211078ac682b5f8b74a8533e26324eb243e8
 
 const Cheat = ({ nickName }) => {
   const [myMessage, setMyMessage] = useState([]);
