@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { dbService } from "../fbase";
+import { dbService } from "../../fbase";
 import { addDoc, collection } from "firebase/firestore";
 
 const SendMessage = ({ nickName, styled }) => {

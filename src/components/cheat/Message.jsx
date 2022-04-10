@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { dbService } from "../fbase";
+import { dbService } from "../../fbase";
 import { doc, deleteDoc } from "firebase/firestore";
 
 const Message = ({ list, nickName }) => {

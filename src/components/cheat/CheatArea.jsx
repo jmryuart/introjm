@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { dbService } from "../fbase";
+import { dbService } from "../../fbase";
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 import Message from "./Message";
 

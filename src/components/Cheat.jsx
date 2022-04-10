@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "../css/Cheat.module.css";
-import CheatArea from "./CheatArea";
-import SendMessage from "./SendMessage";
+import CheatArea from "./cheat/CheatArea";
+import SendMessage from "./cheat/SendMessage";
 
 const Cheat = ({nickName}) => {
   return (
