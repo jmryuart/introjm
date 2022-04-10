@@ -85,24 +85,8 @@ div.board .boardList .boardArea .divideBoard:first-of-type .boardTitle {
 }
 
 div.board .boardList .selectPage {
-  padding: 10px 0;
   border: 0px solid #000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-div.board .boardList .selectPage span {
-  font-size: 18px;
-  line-height: 40px;
-}
-
-div.board .boardList .selectPage span:hover {
-  border-radius: 5px;
-  background-color: #ccc;
+  text-align: right;
 }
 
 div.board .boardList .writeNew {
@@ -137,5 +121,10 @@ div.board h5.write {
   width: fit-content;
   margin-left: auto;
   cursor: pointer;
+}
+
+div.board .selectPage {
+  padding: 20px 0;
+  text-align: center;
 }
 /*# sourceMappingURL=Board.module.css.map */

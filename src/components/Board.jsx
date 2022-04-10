@@ -5,7 +5,6 @@ import BoardWrite from "./board/BoardWrite";
 import { dbService } from "../fbase";
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 import BoardList from "./board/BoardList";
-import BoardRepair from "./board/BoardRepair";
 
 const Board = ({ nickName }) => {
   const dividePageNum = 10;
@@ -14,21 +13,17 @@ const Board = ({ nickName }) => {
   const [boardRead, setBoardRead] = useState([]);
   let pageNum = [];
   const [boardpage, setBoardpage] = useState(1);
-
-  const [boardId, setBoardId] = useState("");
-  const [text, setText] = useState("");
-  const [title, setTitle] = useState("");
   useEffect(() => {
     const q = query(
       collection(dbService, "board"),
       orderBy("createdAt", "desc")
     );
     onSnapshot(q, (snapshot) => {
-      const boardArr = snapshot.docs.map((doc) => ({
+      const nweetArr = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
-      setBoardRead(boardArr);
+      setBoardRead(nweetArr);
     });
   }, []);
 
@@ -44,6 +39,7 @@ const Board = ({ nickName }) => {
   for (let i = Math.ceil(boardRead.length / dividePageNum); i > 0; i--) {
     pageNum.push(i);
   }
+  
   return (
     <div className={styled.board}>
       {boardFlag === "board" && (
@@ -59,32 +55,13 @@ const Board = ({ nickName }) => {
         />
       )}
       {boardFlag === "write" && (
-        <BoardWrite
-          setBoardFlag={setBoardFlag}
-          nickName={nickName}
-          setBoardpage={setBoardpage}
-        />
+        <BoardWrite setBoardFlag={setBoardFlag} nickName={nickName} />
       )}
       {boardFlag === "detail" && (
         <BoardDetail
           boardSet={boardSet}
           nickName={nickName}
           setBoardFlag={setBoardFlag}
-          setBoardId={setBoardId}
-          setTitle={setTitle}
-          setText={setText}
-        />
-      )}
-      {boardFlag === "repair" && (
-        <BoardRepair
-          nickName={nickName}
-          setBoardFlag={setBoardFlag}
-          boardId={boardId}
-          title={title}
-          text={text}
-          setBoardId={setBoardId}
-          setTitle={setTitle}
-          setText={setText}
         />
       )}
     </div>

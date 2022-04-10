@@ -1,72 +1,45 @@
 div.boardWrite {
-  border: 0;
-}
-
-div.boardWrite .writeHeader {
-  position: relative;
-}
-
-div.boardWrite .writeHeader .title {
-  font-size: 24px;
-  line-height: 40px;
-}
-
-div.boardWrite .writeHeader .title i {
-  font-weight: 700;
-  font-family: "dm serif display";
-  font-style: italic;
-}
-
-div.boardWrite .writeHeader .title input {
-  font-size: 16px;
-  line-height: 40px;
-  width: calc(100% - 100px);
-  border: 0;
-  border-bottom: 1px solid #000;
-}
-
-div.boardWrite .writeHeader .writer {
-  position: absolute;
-  top: 100%;
-  right: 0;
-}
-
-div.boardWrite .writeHeader .writer span {
-  cursor: unset;
-}
-
-div.boardWrite .writeSection {
-  margin-top: 30px;
-}
-
-div.boardWrite .writeSection textarea {
-  font-family: "noto serif kr";
-  font-weight: 300;
-  padding: 10px;
-  resize: none;
-  width: 100%;
-  height: 300px;
-  line-height: 20px;
-}
-
-div.boardWrite .writeFooter {
+  height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-weight: 500;
-  color: #555;
-  line-height: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
 }
 
-div.boardWrite .writeFooter span:hover {
-  color: #000;
+div.boardWrite div {
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.boardWrite div i {
   font-weight: 700;
 }
 
-div.boardWrite .writeFooter .goWrite span:last-of-type {
-  font-size: 18px;
+div.boardWrite div input {
+  height: 40px;
+  width: 200px;
+  border: 0;
+  border-bottom: 1px solid #000;
+  text-indent: 3px;
+}
+
+div.boardWrite textarea {
+  resize: none;
+  width: 100%;
+  height: 300px;
+}
+
+div.boardWrite button {
+  width: 200px;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=BaordWrite.module.css.map */

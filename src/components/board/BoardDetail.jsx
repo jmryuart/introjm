@@ -3,14 +3,7 @@ import styled from "../../css/BoardDetail.module.css";
 import { dbService } from "../../fbase";
 import { doc, deleteDoc } from "firebase/firestore";
 
-const BoardDetail = ({
-  boardSet,
-  setBoardFlag,
-  nickName,
-  setTitle,
-  setText,
-  setBoardId,
-}) => {
+const BoardDetail = ({ boardSet, setBoardFlag, nickName }) => {
   const deleteRef = doc(dbService, "board", `${boardSet.id}`);
   const returnBoard = () => {
     setBoardFlag("board");
@@ -23,46 +16,17 @@ const BoardDetail = ({
       });
     }
   };
-  const write = () => {
-    setBoardFlag("write");
-  };
-  const repairBoard = () => {
-    setBoardId(boardSet.id)
-    setTitle(boardSet.title);
-    setText(boardSet.text);
-    setBoardFlag("repair");
-  };
   return (
     <div className={styled.boardDetail}>
-      <div className={styled.boarderHeader}>
-        <div className={styled.title}>
-          <i>Title.</i>
-          <span>{boardSet.title}</span>
-        </div>
-        <div className={styled.writer}>
-          <span>{boardSet.creatorId}</span>
-        </div>
-      </div>
-      <div className={styled.boarderSection}>
-        <p>{boardSet.title}</p>
-        <p>{boardSet.text}</p>
-      </div>
-      <div className={styled.boarderFooter}>
-        <div className={styled.btns}>
-          <span onClick={returnBoard}>리스트로</span>
-          <span onClick={write}>글쓰기</span>
-          {nickName === boardSet.creatorId && (
-            <>
-              <span onClick={removeBoard}>지우기</span>
-              <span onClick={repairBoard}>수정하기</span>
-            </>
-          )}
-        </div>
-        <div className={styled.date}>
-          <i>게시일 : </i>
-          <span>{boardSet.date}</span>
-        </div>
-      </div>
+      <h4>
+        <i>{boardSet.title}</i>
+      </h4>
+      <h5>{boardSet.date}</h5>
+      <p>{boardSet.text}</p>
+      <button onClick={returnBoard}>목록보기</button>
+      {boardSet.creatorId === nickName && (
+        <button onClick={removeBoard}>삭제하기</button>
+      )}
     </div>
   );
 };
