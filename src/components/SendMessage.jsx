@@ -18,7 +18,7 @@ const SendMessage = ({ nickName, styled }) => {
     <div className={styled.sendMessage}>
       <form onSubmit={onSubmit}>
         <span>
-          <i className="icon-bubbles4"></i>
+          <i className="icon-bubble2"></i>
         </span>
         <input type="textarea" ref={messageRef} />
         <button>

@@ -4,27 +4,104 @@ div.board {
   padding: 80px 40px 40px;
 }
 
-div.board .divideBoard {
+div.board .boardList {
+  border: 0px solid #000;
+}
+
+div.board .boardList .boardName {
+  border-bottom: 3px solid #000;
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+div.board .boardList .boardArea {
+  border-top: 2px solid #555;
+  border-bottom: 1px solid #000;
+  margin: 10px 10px 0;
+}
+
+div.board .boardList .boardArea .divideBoard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-bottom: 1px solid #000;
+  line-height: 40px;
+  height: 40px;
+  overflow: hidden;
 }
 
-div.board .divideBoard h4 {
-  text-indent: 20px;
-  width: calc(100% - 180px);
-  background-color: #eee;
-  line-height: 30px;
-  border: 1px solid #000;
+div.board .boardList .boardArea .divideBoard span {
+  font-family: "dm serif display";
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 700;
+  cursor: unset;
 }
 
-div.board .divideBoard h5 {
+div.board .boardList .boardArea .divideBoard .boardTitle {
   line-height: 30px;
+  height: 30px;
+  margin: 5px 0;
+  width: calc(100% - 210px);
+  border: 0px solid #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 580px) {
+  div.board .boardList .boardArea .divideBoard .boardTitle {
+    width: calc(100% - 110px);
+  }
+}
+
+div.board .boardList .boardArea .divideBoard .boardTitle:hover {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+div.board .boardList .boardArea .divideBoard .boardCreator {
   text-align: center;
-  width: 100px;
-  padding: 0 5px;
-  background-color: #ccc;
-  border: 1px solid #000;
+  font-weight: 500;
+  width: 110px;
+  border-left: 1px solid #000;
+}
+
+div.board .boardList .boardArea .divideBoard .boardCreatedAt {
+  border-left: 1px solid #000;
+  text-align: center;
+  width: 90px;
+}
+
+@media (max-width: 580px) {
+  div.board .boardList .boardArea .divideBoard .boardCreatedAt {
+    display: none;
+  }
+}
+
+div.board .boardList .boardArea .divideBoard:first-of-type .boardTitle {
+  cursor: unset;
+}
+
+div.board .boardList .selectPage {
+  border: 0px solid #000;
+  text-align: right;
+}
+
+div.board .boardList .writeNew {
+  font-family: "noto serif kr";
+  font-weight: 500;
+  border-top: 3px solid #000;
+  text-align: right;
+  font-size: 22px;
+  line-height: 40px;
+  letter-spacing: 10px;
+}
+
+div.board .boardList .writeNew i:hover {
+  font-weight: 700;
+  cursor: pointer;
 }
 
 div.board table {
@@ -49,9 +126,5 @@ div.board h5.write {
 div.board .selectPage {
   padding: 20px 0;
   text-align: center;
-}
-
-div.board .selectPage span:first-of-type {
-  font-weight: 700;
 }
 /*# sourceMappingURL=Board.module.css.map */
