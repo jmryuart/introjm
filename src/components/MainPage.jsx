@@ -68,11 +68,6 @@ const MainPage = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about">
-            A<span>BOUT</span>
-          </NavLink>
-        </li>
-        <li>
           <NavLink to="/portfolio">
             P<span>ORTFOLIO</span>
           </NavLink>
@@ -90,6 +85,11 @@ const MainPage = () => {
         <li>
           <NavLink to="/introJinmo">
             이<span>력서</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">
+            A<span>BOUT</span>
           </NavLink>
         </li>
       </menu>
