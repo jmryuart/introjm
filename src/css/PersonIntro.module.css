@@ -34,7 +34,7 @@ div.personIntro .personInfo {
 div.personIntro .personInfo .image {
   width: 120px;
   height: 150px;
-  background-image: url("http://ntnoop.com/dataserver/jinmo.jpg");
+  background-image: url("http://test.ntnoop.com/dataserver/jinmo.jpg");
   background-position: center;
   background-size: cover;
   border: 1px solid #000;

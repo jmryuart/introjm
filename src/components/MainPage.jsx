@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styled from "../css/MainPage.module.css";
-import { Route, NavLink, useHistory } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth, dbService } from "../fbase";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
@@ -14,11 +13,11 @@ import Log from "./Log";
 import Introduce from "./Introduce";
 
 const MainPage = () => {
+  const [falg, setFalg] = useState("home");
   const [loggingFlag, setLoggingFlag] = useState(false);
   const [logFlag, setLogFlag] = useState(false);
   const [joinFlag, setJoinFlag] = useState(false);
   const [nickName, setNickName] = useState(null);
-  const history = useHistory();
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -44,7 +43,6 @@ const MainPage = () => {
     if (ok) {
       auth.signOut();
       setNickName(null);
-      history.push("/");
     }
   };
   const openLog = () => {
@@ -59,38 +57,51 @@ const MainPage = () => {
     setLogFlag(false);
     setJoinFlag(false);
   };
+
   return (
     <div className={styled.wrap}>
       <menu>
-        <li>
-          <NavLink to="/">
-            H<span>OME</span>
-          </NavLink>
+        <li
+          onClick={() => {
+            setFalg("home");
+          }}
+        >
+          H<span>OME</span>
         </li>
-        <li>
-          <NavLink to="/portfolio">
-            P<span>ORTFOLIO</span>
-          </NavLink>
+        <li
+          onClick={() => {
+            setFalg("portfolio");
+          }}
+        >
+          P<span>ORTFOLIO</span>
         </li>
-        <li>
-          <NavLink to="/board">
-            B<span>OARD</span>
-          </NavLink>
+        <li
+          onClick={() => {
+            setFalg("board");
+          }}
+        >
+          B<span>OARD</span>
         </li>
-        <li>
-          <NavLink to="/cheat">
-            C<span>HEAT</span>
-          </NavLink>
+        <li
+          onClick={() => {
+            setFalg("cheat");
+          }}
+        >
+          C<span>HEAT</span>
         </li>
-        <li>
-          <NavLink to="/introJinmo">
-            이<span>력서</span>
-          </NavLink>
+        <li
+          onClick={() => {
+            setFalg("introduce");
+          }}
+        >
+          이<span>력서</span>
         </li>
-        <li>
-          <NavLink to="/about">
-            A<span>BOUT</span>
-          </NavLink>
+        <li
+          onClick={() => {
+            setFalg("about");
+          }}
+        >
+          A<span>BOUT</span>
         </li>
       </menu>
       <div className={styled.logJoin}>
@@ -110,24 +121,12 @@ const MainPage = () => {
         {logFlag && <Log closeBtn={closeBtn} />}
         {joinFlag && <Join closeBtn={closeBtn} />}
       </div>
-      <Route path="/introJinmo" exact>
-        <Introduce />
-      </Route>
-      <Route path="/" exact>
-        <Home />
-      </Route>
-      <Route path="/about" exact>
-        <About />
-      </Route>
-      <Route path="/portfolio" exact>
-        <Portfolio />
-      </Route>
-      <Route path="/board" exact>
-        <Board nickName={nickName} />
-      </Route>
-      <Route path="/cheat" exact>
-        <Cheat nickName={nickName} />
-      </Route>
+      {falg === "home" && <Home />}
+      {falg === "about" && <About />}
+      {falg === "portfolio" && <Portfolio />}
+      {falg === "board" && <Board nickName={nickName} />}
+      {falg === "cheat" && <Cheat nickName={nickName} />}
+      {falg === "introduce" && <Introduce />}
     </div>
   );
 };
