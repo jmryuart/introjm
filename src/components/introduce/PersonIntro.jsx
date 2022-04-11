@@ -8,7 +8,7 @@ const PersonIntro = () => {
       <h2>즐기면서 일하고 싶은 유진모 입니다.</h2>
       <div className={styled.personInfo}>
         <div className={styled.image}>
-          <a target="_blank" rel="noreferrer" href="http://www.ntnoop.com/dataserver/jinmo.jpg"
+          <a target="_blank" rel="noreferrer" href="http://test.ntnoop.com/dataserver/jinmo.jpg"
             >유진모사진</a
           >
         </div>
