@@ -1,0 +1,99 @@
+div.portfolio {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 40px;
+  padding-top: 100px;
+}
+
+div.portfolio ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+div.portfolio ul li h3 {
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: capitalize;
+  font-family: "dm serif display";
+  font-style: italic;
+  letter-spacing: 0.8px;
+}
+
+div.portfolio ul li h4 {
+  font-size: 22px;
+  line-height: 40px;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.portfolio ul li h4 span {
+  font-family: "dm serif display";
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+div.portfolio ul li h6 {
+  font-weight: 700;
+}
+
+div.portfolio ul li p {
+  color: #555;
+  font-weight: 500;
+  line-height: 25px;
+  font-size: 15px;
+  text-indent: 8px;
+  margin-top: 20px;
+}
+
+div.portfolio ul li .btns {
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  gap: 30px;
+}
+
+div.portfolio ul li .btns div {
+  border-radius: 20px;
+  font-weight: 700;
+  height: 52px;
+  margin: 4px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 30px;
+  border: 1px solid #000;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+div.portfolio ul li .btns div a {
+  padding: 10px 15px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+div.portfolio ul li .btns div:hover {
+  background-color: #000;
+}
+
+div.portfolio ul li .btns div:hover a {
+  color: #fff;
+}
+/*# sourceMappingURL=Portfolio.module.css.map */

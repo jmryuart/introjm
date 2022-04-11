@@ -30,12 +30,20 @@ const About = () => {
           </li>
           <li>kakaotalk : kinderjm</li>
           <li>
-            <a target="_blank" href="http://test.ntnoop.com/jinmo.pdf">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="http://test.ntnoop.com/jinmo.pdf"
+            >
               이력서및 자기소개서 다운로드
             </a>
           </li>
           <li>
-            <a target="_blank" href="http://test.ntnoop.com/jinmo_mbti.pdf">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="http://test.ntnoop.com/jinmo_mbti.pdf"
+            >
               유진모의 MBTI 확인하기
             </a>
           </li>
@@ -49,7 +57,7 @@ const About = () => {
           배우면 배울수록 시각적으로 보이는 이미지도 중요하지만 그것이 보여지는
           방식을 구현하는 것도 중요하다는 것을 알게됐습니다. 그리고 구현하기
           위해서는 코딩이 매우 중요하며 코딩에 관심이 많았던 저로서는 이 분야를
-          파고들어야 겠다고 생각했습니다. 그렇게 시작한 웹퍼블리셔로서의
+          파고들어야 겠다고 생각했습니다. 그렇게 시작한 웹개발자로서의
           준비과정. 가끔씩 원하는데로 코딩이 되지 않을때가 있으면 밤새 코딩을
           하며 스트레스를 받기도 했지만 그런 고생을 한 뒤에 도출된 결과를
           마주할때 느끼는 그 쾌감이 다시 또 저를 컴퓨터 앞에 앉혀 밤새게 만들고
