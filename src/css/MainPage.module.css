@@ -28,23 +28,18 @@ div.wrap menu li {
   width: fit-content;
   border-radius: 10px;
   font-weight: 700;
-}
-
-div.wrap menu li a {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   line-height: 20px;
   padding: 10px;
   display: block;
   border-radius: 10px;
+  cursor: pointer;
 }
 
-div.wrap menu li a span {
+div.wrap menu li span {
   display: none;
 }
 
-div.wrap menu li a:hover span {
+div.wrap menu li:hover span {
   display: inline;
 }
 
