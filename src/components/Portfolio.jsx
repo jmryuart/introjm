@@ -10,6 +10,16 @@ const Portfolio = () => {
           <h4>
             유진모의 <span>Portfolio</span>
           </h4>
+          <div className={styled.btns}>
+          <div className={styled.original}>
+              <a
+                rel="noreferrer"
+                href="/"
+              >
+                Here Site
+              </a>
+            </div>
+          </div>
           <h6>제작기간 : 2022. 04.07 ~</h6>
           <p>
             제 현재 이 포트폴리오 사이트가 하나의 프로젝트 입니다! 이 사이트를
@@ -40,15 +50,6 @@ const Portfolio = () => {
           <h3>project2</h3>
           <h4>Louis Poulsen 리뉴얼</h4>
           <div className={styled.btns}>
-            <div className={styled.renewal}>
-              <a
-                href="http://test.ntnoop.com/louispoulsen"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Renewal Site
-              </a>
-            </div>
             <div className={styled.original}>
               <a
                 target="_blank"
@@ -56,6 +57,15 @@ const Portfolio = () => {
                 href="https://www.louispoulsen.com/ko-kr/private"
               >
                 Original Site
+              </a>
+            </div>
+            <div className={styled.renewal}>
+              <a
+                href="http://test.ntnoop.com/louispoulsen"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Renewal Site
               </a>
             </div>
           </div>
@@ -75,15 +85,6 @@ const Portfolio = () => {
           <h3>project3</h3>
           <h4>효성중공업 리뉴얼</h4>
           <div className={styled.btns}>
-            <div className={styled.renewal}>
-              <a
-                href="http://test.ntnoop.com/hyosung"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Renewal Site
-              </a>
-            </div>
             <div className={styled.original}>
               <a
                 target="_blank"
@@ -93,13 +94,24 @@ const Portfolio = () => {
                 Original Site
               </a>
             </div>
+            <div className={styled.renewal}>
+              <a
+                href="http://test.ntnoop.com/hyosung"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Renewal Site
+              </a>
+            </div>
           </div>
           <h6>제작기간 : 2021. 07.11 ~ 2021. 07.31</h6>
           <p>
             UX/UI를 배우고 제일 처음 직접 디자인 하고 Html / Scss 를 사용하여
             직접 제작해본 페이지 입니다.
-            <br />이 사이트를 제작 하면서 공통요소를 어떻게 만들고 어떻게
+            <br />
+            이 사이트를 제작 하면서 공통요소를 어떻게 만들고 어떻게
             적용시키는지에 대해 많은 생각을 갖을 수 있었습니다.
+            <br />이 페이지는 모바일을 고려하지 못한 점 죄송합니다.
           </p>
         </li>
       </ul>

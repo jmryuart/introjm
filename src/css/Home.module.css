@@ -1,0 +1,81 @@
+div.home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 100px 60px 40px;
+  margin: 0 auto;
+  color: #000;
+  overflow: scroll;
+}
+
+div.home .page {
+  font-family: "noto serif kr";
+  max-width: 860px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+div.home .page .header {
+  gap: 20px;
+  color: #555;
+  line-height: 60px;
+  color: inherit;
+}
+
+div.home .page .header h3 {
+  font-size: 38px;
+  font-family: "dm serif display";
+  font-style: italic;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: inherit;
+}
+
+div.home .page .header h6 {
+  text-indent: 7px;
+  margin-top: 20px;
+  font-family: 'noto sans kr';
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+div.home .page div a {
+  font-family: "dm serif display";
+  font-style: italic;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+div.home .page div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+div.home .page div ul li i {
+  font-family: "noto sans kr";
+  font-weight: 700;
+}
+
+div.home .page div ul li span {
+  margin: 0 5px;
+}
+/*# sourceMappingURL=Home.module.css.map */
