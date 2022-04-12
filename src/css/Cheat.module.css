@@ -33,6 +33,13 @@ div.cheat ul::-webkit-scrollbar {
   display: none;
 }
 
+div.cheat ul li.lodingMessage {
+  text-align: center;
+  font-size: 36px;
+  line-height: 400px;
+  font-weight: 700;
+}
+
 div.cheat ul li div {
   position: relative;
 }
@@ -57,6 +64,7 @@ div.cheat ul li div div {
   padding: 15px;
   position: relative;
   border: 1px solid #000;
+  white-space: pre-wrap;
 }
 
 div.cheat ul li div div i {
@@ -115,6 +123,7 @@ div.cheat ul li .othermessage {
 div.cheat ul li .othermessage div {
   background-color: #ddf;
   border-radius: 0 15px 15px 15px;
+  white-space: pre-wrap;
 }
 
 div.cheat ul li .othermessage div h6 {
@@ -146,11 +155,15 @@ div.cheat .sendMessage form span {
   background-color: #fff;
 }
 
-div.cheat .sendMessage form input {
+div.cheat .sendMessage form textarea {
   width: calc(100% - 60px);
   border: 0;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
+  resize: none;
+  line-height: 30px;
+  height: 32px;
+  overflow: hidden;
 }
 
 div.cheat .sendMessage form button {
