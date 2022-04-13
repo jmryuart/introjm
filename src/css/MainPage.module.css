@@ -67,6 +67,10 @@ div.wrap menu li:nth-of-type(6) {
   background-color: #ffc;
 }
 
+div.wrap menu li:nth-of-type(7) {
+  background-color: #9fc;
+}
+
 div.wrap div.logJoin {
   text-align: right;
   position: fixed;

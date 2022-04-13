@@ -22,33 +22,6 @@ const Cheat = ({ nickName }) => {
   }, []);
   return (
     <div className={styled.cheat}>
-      <ul>
-        {myMessage.map((list, index, array) => (
-          <li key={list.id}>
-            <>
-              {nickName === list.creatorId ? (
-                <div className={styled.mymessage}>
-                  <Message
-                    nickName={nickName}
-                    list={list}
-                    index={index}
-                    array={array}
-                  />
-                </div>
-              ) : (
-                <div className={styled.othermessage}>
-                  <Message
-                    nickName={nickName}
-                    list={list}
-                    index={index}
-                    array={array}
-                  />
-                </div>
-              )}
-            </>
-          </li>
-        ))}
-      </ul>
       {nickName && (
         <SendMessage
           styled={styled}
@@ -56,6 +29,37 @@ const Cheat = ({ nickName }) => {
           firstMessage={myMessage[0]}
         />
       )}
+      <ul>
+        {myMessage.length !== 0 ? (
+          myMessage.map((list, index, array) => (
+            <li key={list.id}>
+              <>
+                {nickName === list.creatorId ? (
+                  <div className={styled.mymessage}>
+                    <Message
+                      nickName={nickName}
+                      list={list}
+                      index={index}
+                      array={array}
+                    />
+                  </div>
+                ) : (
+                  <div className={styled.othermessage}>
+                    <Message
+                      nickName={nickName}
+                      list={list}
+                      index={index}
+                      array={array}
+                    />
+                  </div>
+                )}
+              </>
+            </li>
+          ))
+        ) : (
+          <li className={styled.lodingMessage}>메세지 목록 로딩중.....</li>
+        )}
+      </ul>
     </div>
   );
 };
