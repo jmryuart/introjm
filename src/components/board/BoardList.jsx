@@ -63,10 +63,18 @@ const BoardList = ({
             ))
         ) : (
           <>
-            <h4>게시판 로딩중..........</h4>
-            <h4>게시판 로딩중..........</h4>
-            <h4>게시판 로딩중..........</h4>
-            <h4>게시판 로딩중..........</h4>
+            <div className={styled.divideBoard}>
+              <h4>게시판 로딩중..</h4>
+            </div>
+            <div className={styled.divideBoard}>
+              <h4>게시판 로딩중....</h4>
+            </div>
+            <div className={styled.divideBoard}>
+              <h4>게시판 로딩중......</h4>
+            </div>
+            <div className={styled.divideBoard}>
+              <h4>게시판 로딩중........</h4>
+            </div>
           </>
         )}
       </div>

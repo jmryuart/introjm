@@ -36,7 +36,7 @@ div.cheat ul::-webkit-scrollbar {
 div.cheat ul li.lodingMessage {
   text-align: center;
   font-size: 36px;
-  line-height: 400px;
+  line-height: 40px;
   font-weight: 700;
 }
 
