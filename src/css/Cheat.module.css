@@ -1,19 +1,27 @@
 div.cheat {
   max-width: 600px;
   height: calc(100vh - 90px);
-  margin: 0 auto;
+  min-height: 220px;
   position: relative;
+  margin: auto;
   top: 60px;
-  padding: 60px 40px 30px;
+  padding: 40px 40px 30px;
   background-color: #eee;
   border-radius: 30px;
   border: 2px solid #000;
   -webkit-box-shadow: 2px 2px 5px #555;
           box-shadow: 2px 2px 5px #555;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 div.cheat ul {
-  height: calc(100% - 40px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,47 +138,49 @@ div.cheat ul li .othermessage div h6 {
   left: 100%;
 }
 
-div.cheat .sendMessage {
-  width: calc(100% - 80px);
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
 div.cheat .sendMessage form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  line-height: 30px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 15px;
 }
 
-div.cheat .sendMessage form span {
+div.cheat .sendMessage form .mark {
   width: 30px;
   text-align: center;
-  border: 1px solid #000;
   border-radius: 15px 0 0 15px;
   border-right: 0;
-  background-color: #fff;
+  line-height: 30px;
 }
 
-div.cheat .sendMessage form textarea {
+div.cheat .sendMessage form .textArea {
   width: calc(100% - 60px);
+  height: 30px;
+}
+
+div.cheat .sendMessage form .textArea textarea {
+  width: 100%;
+  height: inherit;
+  line-height: 28px;
   border: 0;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
   resize: none;
-  line-height: 30px;
-  height: 32px;
   overflow: hidden;
 }
 
-div.cheat .sendMessage form button {
+div.cheat .sendMessage form .sendBtn {
   width: 30px;
-  background-color: #fff;
-  border: 1px solid #000;
-  border-radius: 0 15px 15px 0;
-  border-left: 0;
+}
+
+div.cheat .sendMessage form .sendBtn button {
+  height: 30px;
+  border: 0;
+  background-color: inherit;
+  border-radius: inherit;
+  cursor: pointer;
 }
 /*# sourceMappingURL=Cheat.module.css.map */

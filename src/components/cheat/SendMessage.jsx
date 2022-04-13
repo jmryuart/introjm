@@ -52,17 +52,21 @@ const SendMessage = ({ nickName, styled }) => {
   return (
     <div className={styled.sendMessage}>
       <form onSubmit={onSubmit}>
-        <span>
+        <div className={styled.mark}>
           <i className="icon-bubble2"></i>
-        </span>
-        <textarea
-          ref={messageRef}
-          onKeyDown={enterClick}
-          onKeyUp={enterLeave}
-        />
-        <button>
-          <i className="icon-compass"></i>
-        </button>
+        </div>
+        <div className={styled.textArea}>
+          <textarea
+            ref={messageRef}
+            onKeyDown={enterClick}
+            onKeyUp={enterLeave}
+          />
+        </div>
+        <div className={styled.sendBtn}>
+          <button>
+            <i className="icon-compass"></i>
+          </button>
+        </div>
       </form>
     </div>
   );
