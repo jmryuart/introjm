@@ -11,6 +11,7 @@ import Cheat from "./Cheat";
 import Join from "./Join";
 import Log from "./Log";
 import Introduce from "./Introduce";
+import Webtoons from "./Webtoons";
 
 const MainPage = () => {
   const [falg, setFalg] = useState("home");
@@ -103,6 +104,13 @@ const MainPage = () => {
         >
           A<span>BOUT</span>
         </li>
+        <li
+          onClick={() => {
+            setFalg("webtoons");
+          }}
+        >
+          W<span>ebtoons</span>
+        </li>
       </menu>
       <div className={styled.logJoin}>
         <ul>
@@ -127,6 +135,7 @@ const MainPage = () => {
       {falg === "board" && <Board nickName={nickName} />}
       {falg === "cheat" && <Cheat nickName={nickName} />}
       {falg === "introduce" && <Introduce />}
+      {falg === "webtoons" && <Webtoons />}
     </div>
   );
 };
