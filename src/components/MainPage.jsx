@@ -104,13 +104,13 @@ const MainPage = () => {
         >
           A<span>BOUT</span>
         </li>
-        <li
+        {/* <li
           onClick={() => {
             setFalg("webtoons");
           }}
         >
           W<span>ebtoons</span>
-        </li>
+        </li> */}
       </menu>
       <div className={styled.logJoin}>
         <ul>
@@ -141,3 +141,27 @@ const MainPage = () => {
 };
 
 export default MainPage;
+
+// import React, { useRef } from "react";
+// import styled from "../css/MainPage.module.css";
+// const MainPage = () => {
+//   const testareaRef = useRef("");
+//   const onClick = (e) => {
+//     e.preventDefault();
+//   };
+//   const asdf = (e) => {
+    // const target = e.currentTarget;
+    // testareaRef.current.style.height = "34px";
+    // testareaRef.current.style.height = testareaRef.current.scrollHeight + "px";
+//   };
+//   return (
+//     <div className={styled.aaff}>
+//       <form onSubmit={onClick}>
+//         <textarea ref={testareaRef} onInput={asdf}></textarea>
+//         <button>센드</button>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default MainPage;

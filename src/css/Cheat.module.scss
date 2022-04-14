@@ -107,41 +107,88 @@ div.cheat {
       }
     }
   }
+  // .sendMessage {
+  //   form {
+  //     display: flex;
+  //     align-items: flex-end;
+  //     background-color: #fff;
+  //     border: 1px solid #000;
+  //     border-radius: 15px;
+  //     .mark {
+  //       width: 30px;
+  //       text-align: center;
+  //       border-radius: 15px 0 0 15px;
+  //       border-right: 0;
+  //       line-height: 30px;
+  //     }
+  //     .textArea {
+  //       width: calc(100% - 60px);
+  //       display: flex;
+  //       flex-direction: column-reverse;
+  //       height: fit-content;
+  //       textarea {
+  //         // width: 100%;
+  //         // line-height: 30px;
+  //         // height: 30px;
+  //         // border: 0;
+  //         // resize: vertical;
+  //         // overflow: scroll;
+  //         // &::-webkit-scrollbar {
+  //         //   display: none;}
+  //         resize: none;
+  //         overflow-x: hidden;
+  //         overflow-y: scroll;
+  //         height: 30px;
+  //         max-height: 210px;
+  //         border: 0;
+  //       }
+  //     }
+  //     .sendBtn {
+  //       width: 30px;
+  //       button {
+  //         height: 30px;
+  //         border: 0;
+  //         background-color: inherit;
+  //         border-radius: inherit;
+  //         cursor: pointer;
+  //       }
+  //     }
+  //   }
+  // }
   .sendMessage {
     form {
       display: flex;
       align-items: flex-end;
+      align-items: center;
       background-color: #fff;
       border: 1px solid #000;
       border-radius: 15px;
-      .mark {
-        width: 30px;
+      i {
+        display: block;
         text-align: center;
-        border-radius: 15px 0 0 15px;
-        border-right: 0;
-        line-height: 30px;
-      }
-      .textArea {
-        width: calc(100% - 60px);
-        height: 30px;
-        textarea {
-          width: 100%;
-          height: inherit;
-          line-height: 28px;
-          border: 0;
-          resize: none;
-          overflow: hidden;
-        }
-      }
-      .sendBtn {
         width: 30px;
-        button {
-          height: 30px;
-          border: 0;
-          background-color: inherit;
-          border-radius: inherit;
-          cursor: pointer;
+      }
+      textarea {
+        display: block;
+        width: calc(100% - 60px);
+        background-color: transparent;
+        border: 0;
+        resize: none;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 34px;
+        line-height: 30px;
+        max-height: 124px;
+        &::-webkit-scrollbar {
+          display: none;
         }
+      }
+      button {
+        padding: 0;
+        display: block;
+        width: 30px;
+        border: 0;
+        background-color: transparent;
       }
     }
   }

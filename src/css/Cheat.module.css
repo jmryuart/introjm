@@ -145,42 +145,42 @@ div.cheat .sendMessage form {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #fff;
   border: 1px solid #000;
   border-radius: 15px;
 }
 
-div.cheat .sendMessage form .mark {
-  width: 30px;
+div.cheat .sendMessage form i {
+  display: block;
   text-align: center;
-  border-radius: 15px 0 0 15px;
-  border-right: 0;
-  line-height: 30px;
+  width: 30px;
 }
 
-div.cheat .sendMessage form .textArea {
+div.cheat .sendMessage form textarea {
+  display: block;
   width: calc(100% - 60px);
-  height: 30px;
-}
-
-div.cheat .sendMessage form .textArea textarea {
-  width: 100%;
-  height: inherit;
-  line-height: 28px;
+  background-color: transparent;
   border: 0;
   resize: none;
-  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 34px;
+  line-height: 30px;
+  max-height: 124px;
 }
 
-div.cheat .sendMessage form .sendBtn {
+div.cheat .sendMessage form textarea::-webkit-scrollbar {
+  display: none;
+}
+
+div.cheat .sendMessage form button {
+  padding: 0;
+  display: block;
   width: 30px;
-}
-
-div.cheat .sendMessage form .sendBtn button {
-  height: 30px;
   border: 0;
-  background-color: inherit;
-  border-radius: inherit;
-  cursor: pointer;
+  background-color: transparent;
 }
 /*# sourceMappingURL=Cheat.module.css.map */

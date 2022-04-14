@@ -5,26 +5,6 @@ import { addDoc, collection } from "firebase/firestore";
 const SendMessage = ({ nickName, styled }) => {
   const messageRef = useRef("");
   const [enterFlag, setEnterFlag] = useState(true);
-  const onSubmit = (event) => {
-    event.preventDefault();
-    sendMessage();
-  };
-  const enterClick = (event) => {
-    if (event.keyCode === 13) {
-      if (enterFlag) {
-        setEnterFlag(false);
-        sendMessage();
-      }
-      messageRef.current.value = null;
-    }
-  };
-  const enterLeave = (event) => {
-    setEnterFlag(true);
-    if (event.keyCode === 13) {
-      messageRef.current.value = null;
-    }
-  };
-
   const sendMessage = async () => {
     if (messageRef.current.value !== "") {
       let month = new Date().getMonth() + 1;
@@ -49,24 +29,44 @@ const SendMessage = ({ nickName, styled }) => {
       });
     }
   };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (messageRef.current.value !== null) sendMessage();
+  };
+  const reSize = (e) => {
+    const target = e.currentTarget;
+    target.style.height = "34px";
+    target.style.height = target.scrollHeight + "px";
+  };
+  const onKeyDown = (e) => {
+    if (enterFlag && messageRef.current.value !== null && e.keyCode === 13) {
+      setEnterFlag(false);
+      sendMessage();
+      messageRef.current.value = null;
+      messageRef.current.style.height = "34px";
+    }
+  };
+  const onKeyUp = (e) => {
+    if (e.keyCode === 13) {
+      setEnterFlag(true);
+      messageRef.current.value = null;
+      messageRef.current.style.height = "34px";
+    }
+  };
   return (
     <div className={styled.sendMessage}>
       <form onSubmit={onSubmit}>
-        <div className={styled.mark}>
-          <i className="icon-bubble2"></i>
-        </div>
-        <div className={styled.textArea}>
-          <textarea
-            ref={messageRef}
-            onKeyDown={enterClick}
-            onKeyUp={enterLeave}
-          />
-        </div>
-        <div className={styled.sendBtn}>
-          <button>
-            <i className="icon-compass"></i>
-          </button>
-        </div>
+        <i className="icon-bubble2"></i>
+        <textarea
+          ref={messageRef}
+          onKeyDown={onKeyDown}
+          onKeyUp={onKeyUp}
+          onInput={reSize}
+        ></textarea>
+        <button>
+          <i className="icon-compass"></i>
+        </button>
       </form>
     </div>
   );
