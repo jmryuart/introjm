@@ -1,4 +1,5 @@
 div.wrap {
+  height: 100vh;
   position: relative;
   font-family: "noto sans kr", sans-serif;
   line-height: 20px;
@@ -30,26 +31,23 @@ div.wrap {
           display: inline;
         }
       }
-      &:nth-of-type(1) {
+      &:nth-of-type(6n + 1) {
         background-color: #cfc;
       }
-      &:nth-of-type(2) {
+      &:nth-of-type(6n + 2) {
         background-color: #fcc;
       }
-      &:nth-of-type(3) {
+      &:nth-of-type(6n + 3) {
         background-color: #ccf;
       }
-      &:nth-of-type(4) {
+      &:nth-of-type(6n + 4) {
         background-color: #fcf;
       }
-      &:nth-of-type(5) {
+      &:nth-of-type(6n + 5) {
         background-color: #cff;
       }
-      &:nth-of-type(6) {
+      &:nth-of-type(6n + 6) {
         background-color: #ffc;
-      }
-      &:nth-of-type(7) {
-        background-color: #9fc;
       }
     }
   }
@@ -123,19 +121,3 @@ div.wrap {
     }
   }
 }
-
-// div.aaff {
-//   form {display: flex;
-//     textarea {
-//       resize: none;
-//       overflow-y: scroll;
-//       overflow-x: hidden;
-//       height: 34px;
-//       line-height: 30px;
-//       max-height: 124px;
-//       &::-webkit-scrollbar {
-//         display: none;
-//       }
-//     }
-//   }
-// }

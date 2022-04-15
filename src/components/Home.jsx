@@ -48,6 +48,10 @@ const Home = () => {
               <i>A</i> <span className="icon-arrow-right-solid1"></span> About
               Me 저에게 연락 할 수단을 알려주며 후기도 간략히 남겼습니다.
             </li>
+            <li>
+              <i>L</i> <span className="icon-arrow-right-solid1"></span> Lotto
+              이번주에 한번 도전해보고 싶으시다면?
+            </li>
           </ul>
         </div>
         <div>
