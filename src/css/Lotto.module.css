@@ -1,7 +1,8 @@
 div.lotto {
   position: absolute;
   max-width: 600px;
-  max-height: 300px;
+  max-height: 400px;
+  padding: 50px;
   top: 0;
   bottom: 0;
   left: 0;
@@ -23,6 +24,7 @@ div.lotto .shape {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 5px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
@@ -87,7 +89,7 @@ div.lotto .button h4 {
   width: fit-content;
   margin: 0 auto;
   padding: 0 15px;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 60px;
   border: 2px solid #000;
   border-radius: 15px;
