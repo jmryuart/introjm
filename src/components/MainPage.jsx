@@ -12,6 +12,7 @@ import Join from "./Join";
 import Log from "./Log";
 import Introduce from "./Introduce";
 import Webtoons from "./Webtoons";
+import Lotto from "./Lotto";
 
 const MainPage = () => {
   const [falg, setFalg] = useState("home");
@@ -19,6 +20,7 @@ const MainPage = () => {
   const [logFlag, setLogFlag] = useState(false);
   const [joinFlag, setJoinFlag] = useState(false);
   const [nickName, setNickName] = useState(null);
+  const [userId, setUserId] = useState(null);
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -33,6 +35,7 @@ const MainPage = () => {
             ...doc.data(),
           }));
           setNickName(getNickname[0].nickname);
+          setUserId(user.uid);
         });
       } else {
         setLoggingFlag(false);
@@ -44,6 +47,7 @@ const MainPage = () => {
     if (ok) {
       auth.signOut();
       setNickName(null);
+      setUserId(null);
     }
   };
   const openLog = () => {
@@ -58,7 +62,6 @@ const MainPage = () => {
     setLogFlag(false);
     setJoinFlag(false);
   };
-
   return (
     <div className={styled.wrap}>
       <menu>
@@ -111,6 +114,13 @@ const MainPage = () => {
         >
           W<span>ebtoons</span>
         </li> */}
+        <li
+          onClick={() => {
+            setFalg("lotto");
+          }}
+        >
+          L<span>otto</span>
+        </li>
       </menu>
       <div className={styled.logJoin}>
         <ul>
@@ -135,33 +145,10 @@ const MainPage = () => {
       {falg === "board" && <Board nickName={nickName} />}
       {falg === "cheat" && <Cheat nickName={nickName} />}
       {falg === "introduce" && <Introduce />}
-      {falg === "webtoons" && <Webtoons />}
+      {falg === "webtoons" && <Webtoons userId={userId} nickName={nickName} />}
+      {falg === "lotto" && <Lotto />}
     </div>
   );
 };
 
 export default MainPage;
-
-// import React, { useRef } from "react";
-// import styled from "../css/MainPage.module.css";
-// const MainPage = () => {
-//   const testareaRef = useRef("");
-//   const onClick = (e) => {
-//     e.preventDefault();
-//   };
-//   const asdf = (e) => {
-    // const target = e.currentTarget;
-    // testareaRef.current.style.height = "34px";
-    // testareaRef.current.style.height = testareaRef.current.scrollHeight + "px";
-//   };
-//   return (
-//     <div className={styled.aaff}>
-//       <form onSubmit={onClick}>
-//         <textarea ref={testareaRef} onInput={asdf}></textarea>
-//         <button>센드</button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default MainPage;
