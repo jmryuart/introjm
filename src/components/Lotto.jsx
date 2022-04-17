@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import styled from "../css/Lotto.module.css";
 
 const Lotto = () => {
@@ -11,7 +11,7 @@ const Lotto = () => {
     setSliceNum(document.getElementById("eaCheck").value);
     setLottoFlag(false);
   };
-  const asdf = () => {
+  const createLottoNum = () => {
     let ball = 0,
       count = 0,
       lNum = [],
@@ -37,7 +37,7 @@ const Lotto = () => {
     for (let i = 0; i < selectNum.length; i++) {
       for (let j = 0; j < lottoNum.length; j++) {
         if (selectNum[i] === lottoNum[j]) {
-          asdf();
+          createLottoNum();
         }
       }
     }
@@ -57,14 +57,14 @@ const Lotto = () => {
           }
         }
         if (getNum[i].value > 0 && getNum[i].value < 46) {
-          asdf();
+          createLottoNum();
         } else {
           setLottoFlag(false);
           alert("빈칸 없이 1~45의 숫자를 넣어주세요.");
           return;
         }
       }
-    } else if (getNum.length === 0) asdf();
+    } else if (getNum.length === 0) createLottoNum();
   };
   return (
     <div className={styled.lotto}>
