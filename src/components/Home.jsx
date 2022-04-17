@@ -2,7 +2,6 @@ import React from "react";
 import styled from "../css/Home.module.css";
 
 const Home = () => {
-  let branchName = "first";
   return (
     <div className={styled.home}>
       <div className={styled.page}>
@@ -57,24 +56,13 @@ const Home = () => {
         <div>
           <ul>
             <li>
-              <a
+              코드소스보기 : <a
                 target="_blank"
                 rel="noreferrer"
                 href="https://github.com/jmryuart/introjm"
               >
                 https://github.com/jmryuart/introjm
               </a>
-            </li>
-            <li>
-              깃허브에는 {branchName} 라는 브렌치 이름으로 되어진 부분이 현재
-              배포된 내용의 소스 입니다.
-              <br />그 외의 브랜치는 지속적으로 업데이트 중인 상태일 것 입니다.
-              <br />
-              실제 배포 할 때마다 {branchName} 라는 브랜치 명은 변경 될
-              것입니다.
-              <br />
-              여러 브랜치로 올리는것을 연습은 하였지만 실무에서는 어떻게 사용
-              되어지는지 모르겠네요 ^^;;
             </li>
           </ul>
         </div>

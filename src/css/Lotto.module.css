@@ -1,13 +1,6 @@
 div.lotto {
-  position: absolute;
-  max-width: 600px;
-  max-height: 400px;
   padding: 50px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  padding-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,20 +8,84 @@ div.lotto {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  gap: 20px;
+}
+
+div.lotto h3 {
+  text-align: center;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+div.lotto .fixedNum {
+  margin-top: 30px;
+  line-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+div.lotto .fixedNum h5 {
+  text-indent: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 18px;
+}
+
+div.lotto .fixedNum select {
+  height: 40px;
+  margin-left: 60px;
+  font-size: 15px;
+}
+
+div.lotto .fixedNum select option {
+  line-height: 30px;
+  font-size: 16px;
+}
+
+div.lotto .checkNum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+
+div.lotto .checkNum input {
+  height: 40px;
+  width: 50px;
+  text-align: center;
+  border: 0;
+  border-bottom: 1px solid #000;
+  font-size: 24px;
+}
+
+div.lotto button {
+  margin: 0 auto;
+  width: 120px;
+  height: 40px;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 div.lotto .shape {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  gap: 5px;
 }
 
 div.lotto .shape .ball {
@@ -39,9 +96,6 @@ div.lotto .shape .ball {
   color: #000;
   font-weight: 700;
   position: relative;
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 div.lotto .shape .ball:nth-child(1) {
@@ -81,18 +135,5 @@ div.lotto .shape .ball span {
   width: 30px;
   height: 30px;
   line-height: 30px;
-}
-
-div.lotto .button h4 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  padding: 0 15px;
-  font-size: 24px;
-  line-height: 60px;
-  border: 2px solid #000;
-  border-radius: 15px;
-  cursor: pointer;
 }
 /*# sourceMappingURL=Lotto.module.css.map */
