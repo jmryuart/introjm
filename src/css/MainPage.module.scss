@@ -19,10 +19,15 @@ div.wrap {
       border-radius: 10px;
       font-weight: 700;
       line-height: 20px;
-      padding: 10px;
       display: block;
       border-radius: 10px;
       cursor: pointer;
+      a {
+        padding: 10px;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
       span {
         display: none;
       }
