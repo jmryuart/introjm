@@ -13,9 +13,10 @@ import Log from "./Log";
 import Introduce from "./Introduce";
 import Webtoons from "./Webtoons";
 import Lotto from "./Lotto";
+import { NavLink } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 const MainPage = () => {
-  const [flag, setFlag] = useState("home");
   const [loggingFlag, setLoggingFlag] = useState(false);
   const [logFlag, setLogFlag] = useState(false);
   const [joinFlag, setJoinFlag] = useState(false);
@@ -65,61 +66,45 @@ const MainPage = () => {
   return (
     <div className={styled.wrap}>
       <menu>
-        <li
-          onClick={() => {
-            setFlag("home");
-          }}
-        >
-          H<span>OME</span>
+        <li>
+          <NavLink to="/">
+            H<span>OME</span>
+          </NavLink>
         </li>
-        <li
-          onClick={() => {
-            setFlag("portfolio");
-          }}
-        >
-          P<span>ORTFOLIO</span>
+        <li>
+          <NavLink to="/portfolio">
+            P<span>ORTFOLIO</span>
+          </NavLink>
         </li>
-        <li
-          onClick={() => {
-            setFlag("board");
-          }}
-        >
-          B<span>OARD</span>
+        <li>
+          <NavLink to="/board">
+            B<span>OARD</span>
+          </NavLink>
         </li>
-        <li
-          onClick={() => {
-            setFlag("cheat");
-          }}
-        >
-          C<span>HEAT</span>
+        <li>
+          <NavLink to="/cheat">
+            C<span>HEAT</span>
+          </NavLink>
         </li>
-        <li
-          onClick={() => {
-            setFlag("introduce");
-          }}
-        >
-          이<span>력서</span>
+        <li>
+          <NavLink to="/introduce">
+            이<span>력서</span>
+          </NavLink>
         </li>
-        <li
-          onClick={() => {
-            setFlag("about");
-          }}
-        >
-          A<span>BOUT</span>
+        <li>
+          <NavLink to="/about">
+            A<span>BOUT</span>
+          </NavLink>
         </li>
-        <li
-          onClick={() => {
-            setFlag("webtoons");
-          }}
-        >
-          W<span>ebtoons</span>
-        </li>
-        <li
-          onClick={() => {
-            setFlag("lotto");
-          }}
-        >
-          L<span>otto</span>
+        {/* <li>
+          <NavLink to="/webtoons">
+            W<span>ebtoons</span>
+          </NavLink>
+        </li> */}
+        <li>
+          <NavLink to="/lotto">
+            L<span>otto</span>
+          </NavLink>
         </li>
       </menu>
       <div className={styled.logJoin}>
@@ -139,14 +124,30 @@ const MainPage = () => {
         {logFlag && <Log closeBtn={closeBtn} />}
         {joinFlag && <Join closeBtn={closeBtn} />}
       </div>
-      {flag === "home" && <Home />}
-      {flag === "about" && <About />}
-      {flag === "portfolio" && <Portfolio />}
-      {flag === "board" && <Board nickName={nickName} />}
-      {flag === "cheat" && <Cheat nickName={nickName} />}
-      {flag === "introduce" && <Introduce />}
-      {flag === "webtoons" && <Webtoons userId={userId} nickName={nickName} />}
-      {flag === "lotto" && <Lotto />}
+      <Route path="/" exact>
+        <Home />
+      </Route>
+      <Route path="/about" exact>
+        <About />
+      </Route>
+      <Route path="/portfolio" exact>
+        <Portfolio />
+      </Route>
+      <Route path="/board" exact>
+        <Board nickName={nickName} />
+      </Route>
+      <Route path="/cheat" exact>
+        <Cheat nickName={nickName} />
+      </Route>
+      <Route path="/introduce" exact>
+        <Introduce />
+      </Route>
+      <Route path="/webtoons" exact>
+        <Webtoons userId={userId} nickName={nickName} />
+      </Route>
+      <Route path="/lotto" exact>
+        <Lotto />
+      </Route>
     </div>
   );
 };
