@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Route } from "react-router-dom";
 import styled from "../css/Lotto.module.css";
 
 const Lotto = () => {
@@ -67,35 +68,37 @@ const Lotto = () => {
     } else if (getNum.length === 0) createLottoNum();
   };
   return (
-    <div className={styled.lotto}>
-      <h3>당신에게 행운이 가득하기를 바라며......</h3>
-      <div className={styled.fixedNum}>
-        <h5>몇개의 고정숫자를 선택하시겠습니까?</h5>
-        <select name="eaCheck" id="eaCheck" onChange={getEaCheck}>
-          <option value="0">고정번호 없음</option>
-          <option value="1">1개</option>
-          <option value="2">2개</option>
-          <option value="3">3개</option>
-          <option value="4">4개</option>
-          <option value="5">5개</option>
-        </select>
-      </div>
-      <div className={styled.checkNum} id="checkNum">
-        {numLength.slice(5 - sliceNum).map((num) => (
-          <input type="text" key={num} />
-        ))}
-      </div>
-      <button onClick={getFixedNum}>번호받기</button>
-      {lottoFlag && (
-        <div className={styled.shape}>
-          {lottoNum.map((list, index) => (
-            <div className={styled.ball} key={index}>
-              <span>{list}</span>
-            </div>
+    <Route path="/lotto">
+      <div className={styled.lotto}>
+        <h3>당신에게 행운이 가득하기를 바라며......</h3>
+        <div className={styled.fixedNum}>
+          <h5>몇개의 고정숫자를 선택하시겠습니까?</h5>
+          <select name="eaCheck" id="eaCheck" onChange={getEaCheck}>
+            <option value="0">고정번호 없음</option>
+            <option value="1">1개</option>
+            <option value="2">2개</option>
+            <option value="3">3개</option>
+            <option value="4">4개</option>
+            <option value="5">5개</option>
+          </select>
+        </div>
+        <div className={styled.checkNum} id="checkNum">
+          {numLength.slice(5 - sliceNum).map((num) => (
+            <input type="text" key={num} />
           ))}
         </div>
-      )}
-    </div>
+        <button onClick={getFixedNum}>번호받기</button>
+        {lottoFlag && (
+          <div className={styled.shape}>
+            {lottoNum.map((list, index) => (
+              <div className={styled.ball} key={index}>
+                <span>{list}</span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </Route>
   );
 };
 

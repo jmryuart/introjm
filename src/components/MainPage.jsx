@@ -15,7 +15,7 @@ import Webtoons from "./Webtoons";
 import Lotto from "./Lotto";
 
 const MainPage = () => {
-  const [falg, setFalg] = useState("home");
+  const [flag, setFlag] = useState("home");
   const [loggingFlag, setLoggingFlag] = useState(false);
   const [logFlag, setLogFlag] = useState(false);
   const [joinFlag, setJoinFlag] = useState(false);
@@ -67,56 +67,56 @@ const MainPage = () => {
       <menu>
         <li
           onClick={() => {
-            setFalg("home");
+            setFlag("home");
           }}
         >
           H<span>OME</span>
         </li>
         <li
           onClick={() => {
-            setFalg("portfolio");
+            setFlag("portfolio");
           }}
         >
           P<span>ORTFOLIO</span>
         </li>
         <li
           onClick={() => {
-            setFalg("board");
+            setFlag("board");
           }}
         >
           B<span>OARD</span>
         </li>
         <li
           onClick={() => {
-            setFalg("cheat");
+            setFlag("cheat");
           }}
         >
           C<span>HEAT</span>
         </li>
         <li
           onClick={() => {
-            setFalg("introduce");
+            setFlag("introduce");
           }}
         >
           이<span>력서</span>
         </li>
         <li
           onClick={() => {
-            setFalg("about");
+            setFlag("about");
           }}
         >
           A<span>BOUT</span>
         </li>
-        {/* <li
+        <li
           onClick={() => {
-            setFalg("webtoons");
+            setFlag("webtoons");
           }}
         >
           W<span>ebtoons</span>
-        </li> */}
+        </li>
         <li
           onClick={() => {
-            setFalg("lotto");
+            setFlag("lotto");
           }}
         >
           L<span>otto</span>
@@ -139,14 +139,14 @@ const MainPage = () => {
         {logFlag && <Log closeBtn={closeBtn} />}
         {joinFlag && <Join closeBtn={closeBtn} />}
       </div>
-      {falg === "home" && <Home />}
-      {falg === "about" && <About />}
-      {falg === "portfolio" && <Portfolio />}
-      {falg === "board" && <Board nickName={nickName} />}
-      {falg === "cheat" && <Cheat nickName={nickName} />}
-      {falg === "introduce" && <Introduce />}
-      {falg === "webtoons" && <Webtoons userId={userId} nickName={nickName} />}
-      {falg === "lotto" && <Lotto />}
+      {flag === "home" && <Home />}
+      {flag === "about" && <About />}
+      {flag === "portfolio" && <Portfolio />}
+      {flag === "board" && <Board nickName={nickName} />}
+      {flag === "cheat" && <Cheat nickName={nickName} />}
+      {flag === "introduce" && <Introduce />}
+      {flag === "webtoons" && <Webtoons userId={userId} nickName={nickName} />}
+      {flag === "lotto" && <Lotto />}
     </div>
   );
 };
